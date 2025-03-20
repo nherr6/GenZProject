@@ -1,6 +1,6 @@
 class Word{
   constructor(x,y){
-    this.words = ["Techy", "Ambitious", "Anxious","Passionate", "Apprehensive", "Pioneering", "Selfish", "Wired", "Based", "Epic", "Overdone", "Exposed", "Rot", "Delusional", "Impulsive", "Chopped", "Magical", "Awful"];
+    this.words = ["Techy", "Ambi\nt\nious", "Anxious","Passionate", "Apprehensive", "Pioneering", "Selfish", "Wired", "Based", "Epic", "Overdone", "Exposed", "Rot", "Delusional", "Impulsive", "Chopped", "Magical", "Awful"];
     this.styles = [BOLD, ITALIC, NORMAL, BOLDITALIC];
     this.word = random(this.words);
     this.style = random(this.styles);
@@ -21,7 +21,7 @@ class Word{
   display(){
     push();
     translate(this.x,this.y);
-    textFont('Courier New');
+    textFont(font);
     textStyle(this.style);
     textWrap(CHAR);
     fill(255,255,255, this.opacity);

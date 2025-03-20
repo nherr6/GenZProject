@@ -9,7 +9,7 @@ var interval = 170;
 var glitch = 1;
 
 function preload(){
-  font = loadFont('assets/InterVariable.ttf');
+  font = loadFont('assets/Krungthep.ttf');
   soundFormats('mp3', 'ogg');
   mySound = loadSound('assets/typing-iphone-sound.mp3');
 }
@@ -18,6 +18,7 @@ function setup() {
   createCanvas(w*resize, h*resize);
   words.push(new Word(random(-100, width), y - height*2)); //create new word and push to array
   colorMode(RGB, 255, 255, 255, 1);
+  textFont(font);
   //noLoop(); //comment out to start loop
   //monoSynth = new p5.MonoSynth();
 }
