@@ -1,7 +1,7 @@
 let y = 0, x;
 let y2,x2;
 let w = 1080, h = 1920;
-let resize = 1;
+let resize = 0.25;
 let words =  []; 
 var currentTime;
 var startTime = 0;
