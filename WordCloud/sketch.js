@@ -1,7 +1,7 @@
 let y = 0, x;
 let y2,x2;
-let w = 1080, h = 1920;
-let resize = 0.25;
+let w = window.innerWidth, h = window.innerHeight;
+//let resize = 0.25;
 let words =  []; 
 var currentTime;
 var startTime = 0;
@@ -15,7 +15,8 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(w*resize, h*resize);
+  //createCanvas(w*resize, h*resize);
+  createCanvas(w, h);
   words.push(new Word(random(-100, width), y - height*2)); //create new word and push to array
   colorMode(RGB, 255, 255, 255, 1);
   textFont(font);
@@ -54,6 +55,10 @@ function makeWord(){
 
 function setY2(){
   y2 = random(height);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 //unused function

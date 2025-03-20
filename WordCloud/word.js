@@ -9,7 +9,7 @@ class Word{
     this.x = x;
     this.y = y;
     
-    this.size = (random(70,150));
+    this.size = (random(20,120));
     
     this.scroll = 15;
   }
