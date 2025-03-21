@@ -1,10 +1,11 @@
-let sentenceOg = "generationZ";
-let texts = []; let num = 5;
-let rInc = 50;
+let sentenceOg = "content consumes ";
+let texts = []; let num = 8;
+let rInc = 70;
 let sentence = "";
+let r;
 
 function setup() {
-  createCanvas(1080*0.25, 1920*0.25);
+  createCanvas(window.innerWidth, window.innerHeight);
   angleMode(DEGREES);
   
   for(let i=0; i<num; i++){
@@ -14,16 +15,20 @@ function setup() {
       dir = 1;
     }else{dir = -1;}
     
-    texts[i] = new Type(sentence, r, dir);
+    texts[i] = new Type(sentence, r, dir, i);
   }
 } 
 
 function draw() {
   background(220);
-  translate(width/2, height/2);
+  //translate(width/2, height/2);
   
   for(let i=0; i< num; i++){
       texts[i].update();
       texts[i].display();
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }

@@ -1,5 +1,5 @@
 class Type{
-  constructor(sentence, r, dir){
+  constructor(sentence, r, dir, i){
     this.sentenceArray = sentence.split("");
     this.angle = 0;
     this.r = r;
@@ -11,8 +11,13 @@ class Type{
     this.amt = 0;
     this.min = 0;
     this.angleInc = 90;
-    this.speed = 0.005
-    
+    this.speed = random(0.005,0.01);
+
+    this.tx = random(width*0.1,width);
+    this.ty = random(height*0.1,height);
+
+    this.a = random(100,255);
+    this.size = random(20,50);
   }
   
   update(){
@@ -25,11 +30,12 @@ class Type{
   }
   
   display(){
-    textSize(30);
+    textSize(this.size);
     noStroke();
-    fill(255);
+    fill(255,255,255,this.a);
     
     push();
+    translate(this.tx, this.ty);
     rotate(this.dir * this.angle);
     for(let i = 0; i < this.sentenceArray.length; i++){
       push();
