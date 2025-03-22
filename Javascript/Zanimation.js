@@ -4,7 +4,7 @@ let points = [];
 let font;
 
 function preload(){
-  font = loadFont('/Fonts/Roboto-Regular.ttf');
+  font = loadFont('Fonts/Roboto-Regular.ttf');
 }
 
 function setup() {

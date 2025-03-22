@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Krungthep';
     /*a name to be used later*/
-    src: url('Fonts/Krungthep.ttf');
+    src: url('../Fonts/Krungthep.ttf');
     /*URL to font*/
 }
 
 @font-face {
     font-family: 'HelveticaNeueBOLD';
     /*a name to be used later*/
-    src: url('Fonts/HelveticaNeueLTStd-Bd.otf');
+    src: url('../Fonts/HelveticaNeueLTStd-Bd.otf');
     /*URL to font*/
 }
 

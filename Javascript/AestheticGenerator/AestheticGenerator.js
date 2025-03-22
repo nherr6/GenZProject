@@ -8,9 +8,9 @@ let startTime = 0;
 let interval = 5000;
 
 function preload(){
-  myAdjectives = loadStrings("/Javascript/AestheticGenerator/assets/adjectives.txt");
-  myNouns = loadStrings("/Javascript/AestheticGenerator/assets/nouns.txt");
-  font = loadFont("/Fonts/Roboto-Regular.ttf");
+  myAdjectives = loadStrings("Assets/adjectives.txt");
+  myNouns = loadStrings("Assets/nouns.txt");
+  font = loadFont("Fonts/Roboto-Regular.ttf");
 }
 
 function setup() {
