@@ -11,10 +11,10 @@ var font;
 var mySound;
 
 function preload(){
-  font = loadFont("/GenZProject/Fonts/Krungthep.ttf");
+  font = loadFont("./Assets/Krungthep.ttf");
   
   soundFormats('mp3', 'ogg');
-  mySound = loadSound("/GenZProject/Assets/typing-iphone-sound.mp3");
+  mySound = loadSound("./Assets/Assets/typing-iphone-sound.mp3");
 }
 
 function setup() {
