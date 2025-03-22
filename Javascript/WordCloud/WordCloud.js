@@ -11,7 +11,7 @@ var glitch = 1;
 function preload(){
   font = loadFont("/Fonts/Krungthep.ttf");
   soundFormats('mp3', 'ogg');
-  mySound = loadSound("/Javascript/WordCloud/Assets/typing-iphone-sound.mp3");
+  mySound = loadSound("Assets/typing-iphone-sound.mp3");
 }
 
 function setup() {
