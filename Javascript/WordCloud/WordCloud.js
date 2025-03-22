@@ -7,11 +7,14 @@ var currentTime;
 var startTime = 0;
 var interval = 170;
 var glitch = 1;
+var font;
+var mySound;
 
 function preload(){
-  font = loadFont("/Fonts/Krungthep.ttf");
+  font = loadFont("/GenZProject/Fonts/Krungthep.ttf");
+  
   soundFormats('mp3', 'ogg');
-  mySound = loadSound("Assets/typing-iphone-sound.mp3");
+  mySound = loadSound("/GenZProject/Assets/typing-iphone-sound.mp3");
 }
 
 function setup() {
