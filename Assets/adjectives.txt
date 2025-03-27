@@ -132,6 +132,7 @@ braindead
 family guy
 social justice
 radicalized
+radical
 king
 feminist
 kafka-esque
@@ -155,7 +156,7 @@ cyber-sigilism
 dark gothic
 digitally native
 zoom call
-archive
+archive fashion
 sleepy
 average
 frutiger aero
@@ -182,3 +183,20 @@ ADHD
 ambient
 gucci
 punk
+non-binary
+post
+pre
+queer
+gay
+lesbian
+femme
+masc
+ace
+poly
+catholic
+heterosexual
+homosexual
+straight
+hetero
+homo
+bi-curious

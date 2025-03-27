@@ -5,7 +5,7 @@ let phrase;
 let r;
 let currTime;
 let startTime = 0;
-let interval = 5000;
+let interval = 45;
 
 function preload(){
   myAdjectives = loadStrings("Assets/adjectives.txt");
@@ -29,13 +29,26 @@ function draw() {
 
   // Display the text.
   text(phrase, width / 2, height / 2);
+
+  if(!mouseIsPressed){
+    getNew();
+  }
 }
 
-function mouseClicked(){
-  phrase = "";
-  phrase = random(myAdjectives) + ' ' + random(myNouns) + " core.";
-}
+// function mousePressed() {
+//   phrase = "";
+//   phrase = random(myAdjectives) + ' ' + random(myNouns) + " core.";
+//   startTime = currTime;
+// }
 
 function windowResized(){
   resizeCanvas(window.innerWidth, window.innerHeight);
+}
+
+function getNew(){
+  if(currTime - startTime > interval){
+    phrase = "";
+    phrase = random(myAdjectives) + ' ' + random(myNouns) + " core.";
+    startTime = currTime;
+  }
 }
