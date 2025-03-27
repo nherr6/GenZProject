@@ -8,15 +8,11 @@ class Letter {
 
     this.size = size;
 
-    //this.scroll = 15;
-  }
+    this.values = [1, 255 / 2, 255];
 
-  update() {
-    push();
-    rotate();
-    //this.n++;
-    //console.log(this.n);
-    pop();
+    this.r = random(this.values);
+    this.g = random(this.values);
+    this.b = random(this.values);
   }
 
   display() {
@@ -25,10 +21,8 @@ class Letter {
     rotateX(-frameCount/400);
     translate(0, 0, this.z);
     textFont(font);
-    //textStyle(this.style);
     textWrap(CHAR);
-    fill(255, 0, 0);
-    //strokeWeight(3);
+    fill(this.r, this.g, this.b);
     textSize(this.size);
     text(this.L, this.x, this.y);
     pop();
