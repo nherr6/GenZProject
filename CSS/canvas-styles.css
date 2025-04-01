@@ -6,3 +6,18 @@ html, body {
 canvas {
   display: block;
 }
+
+.caption{
+  background-color: black;
+  color:white;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.instruction{
+  font-style: italic;
+}

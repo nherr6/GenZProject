@@ -6,6 +6,10 @@ let r;
 let currTime;
 let startTime = 0;
 let interval = 45;
+let num = 0;
+let size;
+
+let stored = [];
 
 function preload(){
   myAdjectives = loadStrings("Assets/adjectives.txt");
@@ -20,12 +24,19 @@ function setup() {
 
 function draw() {
   currTime = millis();
-  background(220);
-  // Style the text.
+  background("white");
   textAlign(CENTER);
-  textFont(font);
 
-  textSize(((width) / phrase.length) * 1.7);
+  for (let i = 0; i < stored.length; i++) {
+    stored[i].display();
+  }
+
+  // Style the text.
+  textFont(font);
+  fill("black");
+
+  size = ((width) / phrase.length) * 1.7;
+  textSize(size);
 
   // Display the text.
   text(phrase, width / 2, height / 2);
@@ -40,6 +51,15 @@ function draw() {
 //   phrase = random(myAdjectives) + ' ' + random(myNouns) + " core.";
 //   startTime = currTime;
 // }
+
+function mouseReleased(){
+  stored[num] = new Word(phrase, width, height, size);
+  num++;
+}
+
+function displayStored(){
+  
+}
 
 function windowResized(){
   resizeCanvas(window.innerWidth, window.innerHeight);
