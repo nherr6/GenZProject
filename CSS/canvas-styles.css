@@ -1,23 +1,80 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: black;
+@font-face {
+  font-family: 'roboto-regular';
+  /*a name to be used later*/
+  src: url('Fonts/Roboto-Regular.ttf');
+  /*URL to font*/
 }
+
+@font-face {
+  font-family: 'roboto-thin';
+  /*a name to be used later*/
+  src: url('Fonts/Roboto-Thin.ttf');
+  /*URL to font*/
+}
+
+@font-face {
+  font-family: 'roboto-thin-italic';
+  /*a name to be used later*/
+  src: url('Fonts/Roboto-ThinItalic.ttf');
+  /*URL to font*/
+}
+
+@font-face {
+  font-family: 'roboto-bold';
+  /*a name to be used later*/
+  src: url('Fonts/Roboto-Bold.ttf');
+  /*URL to font*/
+}
+
 canvas {
   display: block;
+  border-bottom: solid;
+  border-color: white;
+  z-index: -1;
+  background-color: black;
+}
+
+.username{
+  font-family: roboto-bold;
+  font-size: 14px;
+  padding-right: 5px;
+  text-decoration: none;
+  color: white;
 }
 
 .caption{
-  background-color: black;
   color:white;
   display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: roboto-regular;
+  width: 90%;
+  margin: auto;
+  font-size: 14px;
+  line-height: 150%;
   padding-left: 5%;
   padding-right: 5%;
-  font-size: 20px;
-  line-height: 150%;
 }
 
 .instruction{
   font-style: italic;
+}
+
+.content{
+  margin: auto;
+  display: grid;
+  justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 10px;
+  align-items: center;
+  width: 80%;
+}
+
+.video {
+  min-width: 600px;
+  margin: auto;
+  min-height: 400px;
+}
+
+.content-main{
+  display: inline;
+  margin: auto;
 }

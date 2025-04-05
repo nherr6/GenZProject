@@ -2,17 +2,18 @@ let y = 0, x;
 let y2,x2;
 let w = window.innerWidth, h = window.innerHeight;
 //let resize = 0.25;
-let words =  []; 
+let words = []; 
+let myWords;
 var currentTime;
 var startTime = 0;
-var interval = 170;
+var interval = 700;
 var glitch = 1;
 var font;
 var mySound;
 
 function preload(){
   font = loadFont("Fonts/Krungthep.ttf");
-  
+  myWords = loadStrings("Assets/oneWord.txt");
   soundFormats('mp3', 'ogg');
   mySound = loadSound("Assets/typing-iphone-sound.mp3");
 }
@@ -20,7 +21,7 @@ function preload(){
 function setup() {
   //createCanvas(w*resize, h*resize);
   createCanvas(w, h);
-  words.push(new Word(random(-100, width), y - height*2)); //create new word and push to array
+  words.push(new Word(random(-100, width), y - height*2, random(myWords))); //create new word and push to array
   colorMode(RGB, 255, 255, 255, 1);
   textFont(font);
   //noLoop(); //comment out to start loop
@@ -38,7 +39,6 @@ function draw() {
     words[i].update();
     words[i].display();
     if(words[i].offscreen() == true){
-      //console.log("word deleted");
       words.splice(i,1);
     }
   }
@@ -46,10 +46,9 @@ function draw() {
 
 function makeWord(){
   if (currentTime - startTime >= interval) {
-    words.push(new Word(random(-10, width), random(y-500, height - 500))); //create new word at top / random x and push to array
+    words.push(new Word(random(width), random(y+500, height - 500), random(myWords))); //create new word at top / random x and push to array
     startTime = currentTime;
-    //console.log("word added");
-    interval = random(100,200);
+    interval = random(0,500);
     mySound.setVolume(random(0.1,0.3));
     mySound.play()
     // playSynth();

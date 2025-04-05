@@ -1,17 +1,17 @@
 class Word{
-  constructor(x,y){
-    this.words = ["Techy", "Ambi\nt\nious", "Anxious","Passionate", "Apprehensive", "Pioneering", "Selfish", "Wired", "Based", "Epic", "Overdone", "Exposed", "Rot", "Delusional", "Impulsive", "Chopped", "Magical", "Awful"];
+  constructor(x,y, word){
     this.styles = [BOLD, ITALIC, NORMAL, BOLDITALIC];
-    this.word = random(this.words);
+    this.word = word;
+    this.letters = split(word,"");
     this.style = random(this.styles);
-    this.opacity = random(1);
+    this.opacity = random(.75);
     
     this.x = x;
     this.y = y;
     
-    this.size = (random(20,120));
+    this.size = (random(20,100));
     
-    this.scroll = 15;
+    this.scroll = -5;
   }
   
   update(){
@@ -29,7 +29,10 @@ class Word{
     //stroke(0, 255, 0, this.opacity);
     strokeWeight(3);
     textSize(this.size);
-    text((this.word).toUpperCase(),0,0,this.size);
+    for(let i=0; i<(this.letters).length; i++){
+      text((this.letters[i]).toUpperCase(), 0, i*this.size);
+    }
+
     pop();
   }
   
