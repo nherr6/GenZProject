@@ -19,11 +19,26 @@
     /*URL to font*/
 }
 
+@font-face {
+    font-family: 'roboto-thin';
+    /*a name to be used later*/
+    src: url('Fonts/Roboto-Thin.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: 'roboto-thin-italic';
+    /*a name to be used later*/
+    src: url('Fonts/Roboto-ThinItalic.ttf');
+    /*URL to font*/
+}
+
 body{
-    font-family: roboto-regular;
     color: white;
+    width: 100%;
     display: grid;
     min-height: 100vh;
+    margin: 0px;
 }
 
 main{
@@ -49,6 +64,7 @@ h2{
     border-bottom-style: solid;
     display: flex;
     max-height: 130px;
+    background-color: black;
 }
 
 .overlap{
@@ -63,13 +79,15 @@ h2{
 }
 
 .icon{
-    max-width: 125px;
-    max-height: 130px;
+    max-width: 110px;
+    max-height: 120px;
     margin: auto auto 0 auto;
 }
 
 .applink{
     color: white;
+    font-family: roboto-regular;
+    font-size: 14px;
     text-align: center;
     display: grid;
     justify-content: center;
@@ -77,13 +95,31 @@ h2{
     padding: 10px;
 }
 
+.applink:hover{
+    transition-timing-function: ease-in;
+    transition-duration: 50ms;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.icon:hover{
+    max-width: 120px;
+    max-height: 120px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 400ms;
+}
+
 .applist{
     display:inline-grid;
     grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(0px, 1fr));
     min-width: 40%;
+    max-width: 80%;
     margin: auto;
     margin-top: 0px;
+    background-color: black;
+    opacity: 0.8;
+    padding: 10px;
 }
 
 .link-text{
@@ -94,32 +130,59 @@ h2{
     text-align: center;
 }
 
-.sorting{
-    display:block;
-    max-width:150px;
+.sorting {
+    max-width: 150px;
     margin: auto;
     padding: auto;
     position: relative;
     top: -80px;
     left: -50px;
+    color: white;
+    display: block;
+    padding: 5px;
 }
 
-.sorting-link{
+.sorting-link {
     text-decoration: underline;
     font-family: Krungthep;
+    color: white;
+}
+
+.sorting-title {
+    font-family: Krungthep;
+    margin: 0px;
 }
 
 footer{
     min-height: 50px;
+    max-height: 100px;
     padding-left: 5%;
-    font-family: krungthep;
+    padding-right: 5%;
     border-top-style: solid;
     align-items: end;
     margin-top: auto;
-    padding-top: 20px;
+    padding-top: 10px;
+    background-color: black;
 }
 
 .footer-link{
     color: white;
     text-decoration: none;
+    padding: 10px;
+    font-family: Krungthep;
+}
+
+.footer-links{
+    padding-bottom: 0px;
+    display: inline;
+}
+
+.footer-text{
+    font-family: roboto-thin;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    text-align: right;
+    text-justify: center;
+    margin: 0px;
 }
