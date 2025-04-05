@@ -63,7 +63,8 @@ h2{
 }
 
 .icon{
-    width: 125px;
+    max-width: 125px;
+    max-height: 130px;
     margin: auto auto 0 auto;
 }
 
@@ -73,23 +74,23 @@ h2{
     display: grid;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .applist{
     display:inline-grid;
     grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
-    width: 80%;
+    grid-template-rows: repeat(auto-fill, minmax(0px, 1fr));
+    min-width: 40%;
     margin: auto;
     margin-top: 0px;
-    justify-content: center;
 }
 
 .link-text{
     text-decoration: none;
     font-style: normal;
     font-size: 15px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
     text-align: center;
 }
 
