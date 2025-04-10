@@ -54,6 +54,18 @@ canvas {
   padding-right: 5%;
 }
 
+.about{
+  color: white;
+  display: inline-block;
+  font-family: roboto-regular;
+  width: 70%;
+  margin: auto;
+  font-size: 14px;
+  line-height: 150%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .instruction{
   font-style: italic;
 }
