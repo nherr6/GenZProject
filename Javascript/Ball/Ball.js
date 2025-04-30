@@ -22,7 +22,7 @@ function setup() {
   // Create a p5.Geometry object.
   beginGeometry();
 
-  sphere(300, int(random(5,24)), int(random(5,24)));
+  sphere(300, int(random(10,30)), int(random(10,30)));
   myGeometry = endGeometry();
 
   seed = int(random(50));
