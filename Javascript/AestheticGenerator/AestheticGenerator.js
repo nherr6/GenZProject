@@ -8,6 +8,10 @@ let startTime = 0;
 let interval = 45;
 let num = 0;
 let size;
+let note;
+let velocity;
+
+let monoSynth;
 
 let stored = [];
 
@@ -20,6 +24,9 @@ function preload(){
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   phrase = random(myAdjectives) + ' ' + random(myNouns) + " core.";
+  monoSynth = new p5.MonoSynth();
+
+  note = 'C5';
 }
 
 function draw() {
@@ -42,6 +49,10 @@ function draw() {
   text(phrase, width / 2, height / 2);
 
   if(!mouseIsPressed){
+    //note = 'C5';
+    velocity = 0.1;
+    note = random(['C2', 'E2', 'G2', 'B2', 'C3', 'E3', 'G3', 'B3', 'D3']);
+    playSynth();
     getNew();
   }
 }
@@ -52,9 +63,17 @@ function draw() {
 //   startTime = currTime;
 // }
 
+function mousePressed(){
+  velocity = 1;
+  note = 'G5';
+  playSynth();
+}
+
 function mouseReleased(){
   stored[num] = new Word(phrase, width, height, size);
   num++;
+  note = 'C5';
+  playSynth();
 }
 
 function displayStored(){
@@ -71,4 +90,18 @@ function getNew(){
     phrase = random(myAdjectives) + ' ' + random(myNouns) + " core.";
     startTime = currTime;
   }
+}
+
+function playSynth() {
+  userStartAudio();
+
+  //let note = random(['Fb4', 'G4']);
+  // note velocity (volume, from 0 to 1)
+  //let velocity = random();
+  // time from now (in seconds)
+  let time = 0;
+  // note duration (in seconds)
+  let dur = 1 / 100;
+
+  monoSynth.play(note, velocity, time, dur);
 }
